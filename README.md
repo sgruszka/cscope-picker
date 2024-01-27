@@ -1,6 +1,6 @@
 # cscope-picker
 
-Minimal [telescope.nvim] (https://github.com/nvim-telescope/telescope.nvim) extension for [cscope] (https://cscope.sourceforge.net/).
+Minimal [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) extension for [cscope](https://cscope.sourceforge.net/).
 
 Expect cscope database is present in current working directory.
 Search for word under cursor.
@@ -11,11 +11,11 @@ Supports only:
  - functions called by a function
  - functions calling a function
 
-For full-featured cscope plugin see [cscope_maps.nvim] (https://github.com/dhananjaylatkar/cscope_maps.nvim)
+For full-featured cscope plugin see [cscope_maps.nvim](https://github.com/dhananjaylatkar/cscope_maps.nvim)
 
 ## Installation
 
-Use your favorite plugin manager, example for [lazy.nvim] (https://github.com/folke/lazy.nvim):
+Use your favorite plugin manager, example for [lazy.nvim](https://github.com/folke/lazy.nvim):
 ```lua
  {
     'sgruszka/cscope-picker',
