@@ -38,6 +38,23 @@ local cscope_find = function(opts, type_num)
     parse_line(line)
   end
 
+  -- Jump if just one entry
+  if #results == 1 then
+    local f = vim.split(results[1], ":")
+    local path = dir..'/'.. f[1]
+
+    vim.cmd("normal! m'")
+
+    -- Push a new item into tagstack
+    local from = { vim.fn.bufnr('%'), vim.fn.line('.'), vim.fn.col('.'), 0 }
+    local items = { { tagname = word , from = from } }
+    vim.fn.settagstack(vim.fn.win_getid(), { items = items }, 't')
+
+    vim.cmd("edit" .. path)
+    vim.api.nvim_win_set_cursor(0, { tonumber(f[2]), 0 })
+    return
+  end
+
   local type = {
     "find this C symbol ",
     "find this definition ",
