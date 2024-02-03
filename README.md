@@ -5,7 +5,7 @@ Minimal [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) exten
 Expect cscope database is present in current working directory.
 Search for word under cursor.
 
-Supports only:
+Supports:
  - all references to a symbol
  - global definitions
  - functions called by a function
